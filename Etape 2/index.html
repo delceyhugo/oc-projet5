@@ -47,18 +47,6 @@
         </div>
     </div>
 </body>
-<script src="script.js"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script>
-$("#button").click(function(){
-    for (let i = 0; i < 6; i++) {
-        $('.quote' + i).empty();
-    }
-    let numberOfQuotes = $("#select").val();
-    let quotes = newQuote(numberOfQuotes);
-    quotes.forEach(function(quote, index) {
-        $('.quote' + index).prepend(quote);
-    });
-});
-</script>
+<script src="script.js"></script>
 </html>
