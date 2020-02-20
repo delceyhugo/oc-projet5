@@ -60,9 +60,7 @@ $("#button").click(function(){
     let quotes = newQuote(numberOfQuotes);
     let i = 1;
     quotes.forEach(function(quote, index) {
-        console.log(quote);
         $('.quote' + i).prepend(quote);
-        console.log(i);
         i++;
     });
 });
