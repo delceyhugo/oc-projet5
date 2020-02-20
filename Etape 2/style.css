@@ -9,7 +9,7 @@ body{
     font-family: 'Roboto Mono', sans-serif;
 }
 .row:first-child{
-    height: 500px;
+    height: 450px;
 }
 button{
     margin: 25px;

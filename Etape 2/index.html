@@ -12,8 +12,6 @@
         <div class="row align-items-end">
             <div class="col"></div>
             <div class="col-6">
-                <p class="quote5 quote">
-                </p>
                 <p class="quote4 quote">
                 </p>
                 <p class="quote3 quote">
@@ -21,6 +19,8 @@
                 <p class="quote2 quote">
                 </p>
                 <p class="quote1 quote">
+                </p>
+                <p class="quote0 quote">
                 </p>
             </div>
             <div class="col"></div>
@@ -56,10 +56,8 @@ $("#button").click(function(){
     }
     let numberOfQuotes = $("#select").val();
     let quotes = newQuote(numberOfQuotes);
-    let i = 1;
     quotes.forEach(function(quote, index) {
-        $('.quote' + i).prepend(quote);
-        i++;
+        $('.quote' + index).prepend(quote);
     });
 });
 </script>
