@@ -11,8 +11,8 @@ const firstTypeOfQuote = [
     ["Pourquoi", "Ne croyez-vous pas que", "Comment", "Ne vous avais-je pas dit que", "Et si, aprés tout,", "Mais si", "On m'a toujours dit que"],
     [" la reconnaissance", " le chemin", " l'argent", ", le passé", " le présent", " l'évolution", " le temps"],
     [" est dans tout les esprits", " n'est pas tout dans la vie", " n'a pas d'importance", " ne fait pas le bonheur", " est un poids", " est une énergie", " a une importance"],
-    [", qu'en est-il pour", " mais concerne plutot", ", tout comme", " mais c'est vraiment", " et c'est quelque chose de", ", qui fini par quelque chose de", ", mais peu devenir"],
-    [" le bonheur ?", " encore plus important ?", " la vie ?", " la vérité ?", " vraiment personnel ?", " situationnel ?", " une leçon de vie ?"]
+    [", qu'en est-il pour", " mais concerne plutot", ", un peu comme", " mais dans ce cas, qu'est-ce que", " mais que c'est quelque chose qui concerne", ", est-ce comme", ", qu'en est t'il pour"],
+    [" le bonheur ?", " les émotions ?", " la vie ?", " la vérité ?", " le futur ?", " la conscience ?", " les leçons de vie ?"]
   ];
 
 // Fonction qui génère un entier aléatoire
@@ -22,10 +22,18 @@ function getRandomInt() {
 
 // Fonction qui génère une citation
 function newQuote(numberOfQuote, typeOfQuote){
-    typeOfQuote = eval(typeOfQuote);
     let quote = [];
-    for (let i = 0; i < numberOfQuote; i++) {
-        quote.push(typeOfQuote[0][getRandomInt()] + typeOfQuote[1][getRandomInt()] + typeOfQuote[2][getRandomInt()] + typeOfQuote[3][getRandomInt()] + typeOfQuote[4][getRandomInt()]);
+    switch (typeOfQuote){
+        case 'firstTypeOfQuote':
+            for (let i = 0; i < numberOfQuote; i++) {
+                quote.push(firstTypeOfQuote[0][getRandomInt()] + firstTypeOfQuote[1][getRandomInt()] + firstTypeOfQuote[2][getRandomInt()] + firstTypeOfQuote[3][getRandomInt()] + firstTypeOfQuote[4][getRandomInt()]);
+            }
+            break;
+        case 'secondTypeOfQuote':
+            for (let i = 0; i < numberOfQuote; i++) {
+                quote.push(secondTypeOfQuote[0][getRandomInt()] + secondTypeOfQuote[1][getRandomInt()] + secondTypeOfQuote[2][getRandomInt()] + secondTypeOfQuote[3][getRandomInt()] + secondTypeOfQuote[4][getRandomInt()]);
+            }
+            break;
     }
     return(quote);
 }
